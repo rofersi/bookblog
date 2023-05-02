@@ -1,0 +1,22 @@
+<html lang="PT-BR">
+    <head>
+      <meta charset="utf-8">
+      <title>BookBlog</title>
+      <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    </head>
+    <body>
+      <h1>Meu Blog de Livros</h1>
+
+      <h2>Livros que Li!</h2>
+      <ul>        
+        <% @articles.each do |article| %>
+          <li>
+            <%= link_to article.title, article %>
+          </li>            
+        <% end %>        
+      </ul>
+
+      <%= link_to "Nova Resenha", new_article_path %>
+
+    </body>
+</html>
